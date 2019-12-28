@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TRIVIA MEJORADA</title>
+    <link rel="stylesheet" href="css/trivia.css">
+</head>
+
+<body>
+    <article>
+        <section id="pantallaPrincipal">
+            <h2>¡Bienvenidos a la Trivia!</h2>
+            <h3>¿Cómo te llamas?</h3>
+            <input type="text" id="nombre" name="name" placeholder="Ingresa tu nombre aquí">
+            <input type="button" id="iniciar" value="Iniciar">
+        </section>
+        <section id="pantallaDeOpciones" class="ocultar">
+            <h3 id="mensajeUsuario"></h3>
+            <h3>Escoge la opción que prefieras.</h3>
+            <input type="button" id="peru" value="¿Cuánto conoces del Perú?">
+            <input type="button" id="gastronomia" value="¿Cuánto sabes de la Gastronomía del Perú?">
+            <input type="button" id="festividades" value="¿Conoces las Festividades del Perú?">
+
+        </section>
+    </article>
+
+    <article>
+        <!--Trivia 1: Perú-->
+        <form name="trivia1" name="triviaP">
+            <section id="peru1" class="ocultar">
+                <h3>¿En qué departamento se encuentra Machu Picchu?</h3>
+                <input type="radio" id="ica" name="preg1Peru" value="Ica">
+                <label for="ica">a. Ica</label><br>
+                <input type="radio" id="arequipa" name="preg1Peru" value="Arequipa">
+                <label for="arequipa">b. Arequipa</label><br>
+                <input type="radio" id="cuzco" name="preg1Peru" value="Cuzco">
+                <label for="cuzco">c. Cuzco</label><br>
+                <input type="radio" id="tacna" name="preg1Peru" value="Tacna">
+                <label for="tacna">d. Tacna</label><br>
+                <input type="button" id="siguiente1Peru" value="Siguiente">
+            </section>
+
+            <section id="peru2" class="ocultar">
+                <h3>¿Cuál es el animal emblemático del Perú?</h3>
+                <input type="radio" id="venadoColaBlanca" name="preg2Peru" value="Venado de cola blanca">
+                <label for="venadoColaBlanca">a. Venado de cola blanca</label><br>
+                <input type="radio" id="vicuña" name="preg2Peru" value="Vicuña">
+                <label for="vicuña">b. Vicuña</label><br>
+                <input type="radio" id="osoAnteojos" name="preg2Peru" value="Oso de anteojos">
+                <label for="osoAnteojos">c. Oso de anteojos</label><br>
+                <input type="radio" id="gatoAndino" name="preg2Peru" value="Gato andino">
+                <label for="gatoAndino">d. Gato andino</label><br>
+                <input type="button" id="siguiente2Peru" value="Siguiente">
+            </section>
+
+            <section id="peru3" class="ocultar">
+                <h3>¿Qué lengua predomina en el país después del español?</h3>
+                <input type="radio" id="aimara" name="preg3Peru" value="Aimara">
+                <label for="aimara">a. Aimara</label><br>
+                <input type="radio" id="quechua" name="preg3Peru" value="Quechua">
+                <label for="quechua">b. Quechua</label><br>
+                <input type="radio" id="maku" name="preg3Peru" value="Lenguas Maku">
+                <label for="maku">c. Lenguas Maku</label><br>
+                <input type="radio" id="charruas" name="preg3Peru" value="Lenguas Charrúas">
+                <label for="charruas">d. Lenguas Charrúas</label><br>
+                <input type="button" id="resultadoPeru" value="Resultado">
+            </section>
+        </form>
+
+        <!--Trivia 2: Gastronomía-->
+        <form name="trivia2" id="triviaG">
+            <section id="gastronomia1" class="ocultar">
+                <h3>¿Cuál plato típico es elaborado por la cocción al calor de piedras calentadas?</h3>
+                <input type="radio" id="patasca" name="preg1Gastronomia" value="Patasca">
+                <label for="patasca">Patasca</label><br>
+                <input type="radio" id="" name="preg1Gastronomia" value="Pachamanca">
+                <label for="pachamanca">Pachamanca</label><br>
+                <input type="radio" id="arrozConPollo" name="preg1Gastronomia" value="Arroz con pollo">
+                <label for="arrozConPollo">Arroz con pollo</label><br>
+                <input type="radio" id="ceviche" name="preg1Gastronomia" value="Ceviche">
+                <label for="ceviche">Ceviche</label><br>
+                <input type="button" id="siguiente1Gastronomia" value="Siguiente">
+            </section>
+
+            <section id="gastronomia2" class="ocultar">
+                <h3>¿La carapulcra es un guiso típico elaborado con... ?</h3>
+                <input type="radio" id="bonito" name="preg2Gastronomia" value="Pescado bonito">
+                <label for="bonito">Pescado bonito</label><br>
+                <input type="radio" id="pancita" name="preg2Gastronomia" value="Pancita">
+                <label for="pancita">Pancita</label><br>
+                <input type="radio" id="papaSeca" name="preg2Gastronomia" value="Papa seca y carne de cerdo">
+                <label for="papaSeca">Papa seca y carne de cerdo</label><br>
+                <input type="radio" id="res" name="preg2Gastronomia" value="Carne de res">
+                <label for="res">Carne de res</label><br>
+                <input type="button" id="siguiente2Gastronomia" value="Siguiente">
+            </section>
+
+            <section id="gastronomia3" class="ocultar">
+                <h3>¿El ají de gallina es un plato típico de la gastronomía peruana, concretamente de la... ?</h3>
+                <input type="radio" id="costa" name="preg3Gastronomia" value="Costa">
+                <label for="costa">Costa</label><br>
+                <input type="radio" id="selva" name="preg3Gastronomia" value="Selva">
+                <label for="selva">Selva</label><br>
+                <input type="radio" id="sierra" name="preg3Gastronomia" value="Sierra">
+                <label for="sierra">Sierra</label>Sierra<br>
+                <input type="radio" id="andes" name="preg3Gastronomia" value="Andes">
+                <label for="andes">Andes</label><br>
+                <input type="button" id="resultadoGastronomia" value="Resultado">
+            </section>
+        </form>
+
+        <!--Trivia 3: Festividades-->
+        <form name="trivia3" id="triviaF">
+            <section id="festividades" class="ocultar">
+                <h3>¿Qué se celebra el primer sabado de febrero?</h3>
+                <input type="radio" id="independencia" name="preg1Festividades" value="Día de la Independencia">
+                <label for="independencia">a. Día de la Independencia</label><br>
+                <input type="radio" id="aniversarioChiclayo" name="preg1Festividades" value="Aniversario de Chiclayo">
+                <label for="aniversarioChiclayo">b. Aniversario de Chiclayo</label><br>
+                <input type="radio" id="diaPiscoSour" name="preg1Festividades" value="Día del Pisco Sour">
+                <label for="diaPiscoSour">c. Día del Pisco Sour</label><br>
+                <input type="radio" id="diaPachamanca" name="preg1Festividades" value="Día de la Pachamanca">
+                <label for="diaPachamanca">d. Día de la Pachamanca</label><br>
+                <input type="button" id="siguiente1Festividades" value="Siguiente">
+
+
+                <h3>¿El 30 de agosto se celebra el día de... ?</h3>
+                <input type="radio" id="inmaculadaConcepcion" name="preg2Festividades" value="La inmaculada concepción">
+                <label for="inmaculadaConcepcion">a. La inmaculada concepción</label><br>
+                <input type="radio" id="fiestasPatrias" name="preg2Festividades" value="Fiestas Patrias">
+                <label for="fiestasPatrias">b. Fiestas Patrias</label><br>
+                <input type="radio" id="senorMilagros" name="preg2Festividades" value="Señor de los milagros">
+                <label for="senorMilagros">c. Señor de los milagros</label><br>
+                <input type="radio" id="santaRosaDeLima" name="preg2Festividades" value="Santa Rosa de Lima">
+                <label for="santaRosaDeLima">d. Santa Rosa de Lima</label><br>
+                <input type="button" id="siguiente2Festividades" value="Siguiente">
+
+                <h3>¿Qué festividad celebrada el 31 de octubre busca fomentar la identidad nacional y cultural?</h3>
+                <input type="radio" id="combateAngamos" name="preg3Festividades" value="Combate de Angamos">
+                <label for="combateAngamos">a. Combate de Angamos</label><br>
+                <input type="radio" id="piscoSour" name="preg3Festividades" value="Día del Pisco Sour">
+                <label for="piscoSour">b. Día del Pisco Sour</label><br>
+                <input type="radio" id="canciónCriolla" name="preg3Festividades" value="Día de la canción criolla">
+                <label for="canciónCriolla">c. Día de la canción criolla</label><br>
+                <input type="radio" id="sanJuan" name="preg3Festividades" value="Fiesta de San Juan">
+                <label for="sanJuan">d. Fiesta de San Juan</label><br>
+                <input type="button" id="resultadoFestividades" value="Resultado">
+            </section>
+        </form>
+
+        <!--Pantalla resultado-opciones-->
+        <section id="resultadoOpciones" class="ocultar">
+            <h3 id="mensajeResultado"></h3>
+            <input type="button" id="vovlverAJugar" value="Volver a jugar">
+            <input type="button" id="salir" value="Salir">
+        </section>
+    </article>
+
+
+
+
+    <script src="trivia.js"></script>
+</body>
+
+</html>
