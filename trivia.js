@@ -102,7 +102,7 @@ botonSiguiente1Gastronomia.addEventListener('click', () => {
 
     varGastronomia1.classList.add('ocultar');
     varGastronomia2.classList.remove('ocultar');
-})
+});
 
 const botonSiguiente2Gastronomia = document.getElementById('siguiente2Gastronomia');
 
@@ -114,9 +114,9 @@ botonSiguiente2Gastronomia.addEventListener('click', () => {
     varGastronomia2.classList.add('ocultar');
     varGastronomia3.classList.remove('ocultar');
 
-})
+});
 
-const botonResultadoGastronomia = document.getElementById('resultadoGastronomia')
+const botonResultadoGastronomia = document.getElementById('resultadoGastronomia');
 
 botonResultadoGastronomia.addEventListener('click', () => {
 
@@ -151,8 +151,70 @@ botonResultadoGastronomia.addEventListener('click', () => {
     } else {
         varMensajeResultado.innerText = `${varUsuario} Tienes ${correctas} aciertos`
     }
-})
+});
 
+// Funcionalidad trivia Festividades
+
+const botonFestividades = document.getElementById('festividades');
+botonFestividades.addEventListener('click', () => {
+    const varPantallaDeOpciones = document.getElementById('pantallaDeOpciones');
+    const varFestividades1 = document.getElementById('festividades1');
+    varPantallaDeOpciones.classList.add('ocultar');
+    varFestividades1.classList.remove('ocultar');
+});
+
+const botonSiguiente1Festividades = document.getElementById('siguiente1Festividades');
+botonSiguiente1Festividades.addEventListener('click', () => {
+    const varFestividades1 = document.getElementById('festividades1');
+    const varFestividades2 = document.getElementById('festividades2');
+    varFestividades1.classList.add('ocultar');
+    varFestividades2.classList.remove('ocultar');
+});
+
+const botonSiguiente2Festividades = document.getElementById('siguiente2Festividades');
+botonSiguiente2Festividades.addEventListener('click', () => {
+    const varFestividades2 = document.getElementById('festividades2');
+    const varFestividades3 = document.getElementById('festividades3');
+    varFestividades2.classList.add('ocultar');
+    varFestividades3.classList.remove('ocultar');
+});
+
+const botonResultadoFestividades = document.getElementById('resultadoFestividades');
+
+botonResultadoFestividades.addEventListener('click', () => {
+
+    const varFestividades3 = document.getElementById('festividades3');
+    const varResultadoOpciones = document.getElementById('resultadoOpciones');
+    const varNombre = document.getElementById('nombre');
+    const varUsuario = varNombre.value;
+    const varMensajeResultado = document.getElementById('mensajeResultado');
+    const preg1Festividades = document.trivia3.preg1Festividades.value;
+    const preg2Festividades = document.trivia3.preg2Festividades.value;
+    const preg3Festividades = document.trivia3.preg3Festividades.value;
+
+    varFestividades3.classList.add('ocultar');
+    varResultadoOpciones.classList.remove('ocultar');
+
+    let correctas = 0;
+
+    if (preg1Festividades === 'Día del Pisco Sour') {
+        correctas++;
+    }
+
+    if (preg2Festividades === 'Santa Rosa de Lima') {
+        correctas++;
+    }
+
+    if (preg3Festividades === 'Día de la canción criolla') {
+        correctas++;
+    }
+
+    if (correctas === 1) {
+        varMensajeResultado.innerText = `${varUsuario} Tienes ${correctas} acierto`
+    } else {
+        varMensajeResultado.innerText = `${varUsuario} Tienes ${correctas} aciertos`
+    }
+});
 
 
 // // Declaro la variable del boton iniciar que voy a usar para la funcion con su respectivo Id.
