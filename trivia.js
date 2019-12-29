@@ -281,7 +281,7 @@ botonSalir.addEventListener('click', () => {
     const varNombreIngresado = varNombre.value.trim().toUpperCase();
     varResultadoOpciones.classList.add('ocultar');
     varDespedida.classList.remove('ocultar');
-    varDespedida.innerHTML = `<h2>¡Gracias por jugar ${varNombreIngresado}, 😊 <br>vuelve pronto! 🤗</h2>`
+    varDespedida.innerHTML = `<h2>¡Gracias por jugar ${varNombreIngresado},😊 <br>vuelve pronto! 🤗</h2>`
 });
 
 // // Declaro la variable del boton iniciar que voy a usar para la funcion con su respectivo Id.
