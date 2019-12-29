@@ -1,21 +1,24 @@
 // Declaro la variable del boton iniciar que voy a usar para la funcion con su respectivo Id.
 const botonIniciar = document.getElementById('iniciar');
-
 // A la variable botonIniciar (que es el boton iniciar) se le aplica el .addEventListener.
 botonIniciar.addEventListener('click', () => {
     //declaro las variables con los elementos html que voy a manipular identificados con su Id.
     const varPantallaPrincipal = document.getElementById('pantallaPrincipal');
-    const varNombre = document.getElementById('nombre').value;
+    const varNombre = document.getElementById('nombre');
+    const varNombreIngresado = varNombre.value.trim(); 
     const varPantallaDeOpcines = document.getElementById('pantallaDeOpciones');
     const varMensajeUsuario = document.getElementById('mensajeUsuario');
 
-    varPantallaPrincipal.classList.add('ocultar');
-    varPantallaDeOpcines.classList.remove('ocultar');
-    varMensajeUsuario.innerText = `Hola ${varNombre.toUpperCase()}, veamos cuánto conoces del Perú.`
+    if (varNombre) {
+        varPantallaPrincipal.classList.add('ocultar');
+        varPantallaDeOpcines.classList.remove('ocultar');
+        varMensajeUsuario.innerText = `Hola ${varNombre.toUpperCase()}, veamos cuánto conoces del Perú.`
+    } else {
+        alert('Debes ingresar tu nombre para continuar');
+    }
 });
 
 // Funcionalidad trivia Perú
-
 const botonPeru = document.getElementById('peru');
 botonPeru.addEventListener('click', () => {
     const varPantallaDeOpciones = document.getElementById('pantallaDeOpciones');
