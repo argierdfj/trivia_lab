@@ -13,7 +13,8 @@ body {
     display: none !important;
 }
 
-#mensajeUsuario, #escoge {
+#mensajeUsuario,
+#escoge {
     text-align: center;
 }
 
@@ -48,8 +49,9 @@ input[type=button] {
     min-width: 100px;
 }
 
-#peru1 {
-    justify-content: center;
+#despedida > h2 {
+    margin-top: 12.5%;
+    margin-bottom: 12.5%;
 }
 
 @media (max-width: 600px) {

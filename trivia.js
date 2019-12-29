@@ -12,7 +12,7 @@ botonIniciar.addEventListener('click', () => {
     if (varNombreIngresado) {
         varPantallaPrincipal.classList.add('ocultar');
         varPantallaDeOpcines.classList.remove('ocultar');
-        varMensajeUsuario.innerText = `Hola ${varNombreIngresado.toUpperCase()}, veamos cuánto conoces del Perú. 😄`
+        varMensajeUsuario.innerText = `Hola ${varNombreIngresado.toUpperCase()}, \n veamos cuánto conoces del Perú. 😄`
     } else {
         alert('Debes ingresar tu nombre para continuar 😒');
     }
@@ -86,7 +86,7 @@ botonResultadoPeru.addEventListener('click', () => {
         }
 
         const mensaje = [
-            '¡Intentalo de nuevo!', '¡Puedes hacerlo mejor!', '¡Bien hecho!', '¡Excelente!'
+            '¡Intentalo de nuevo! 🤕', '¡Puedes hacerlo mejor! 😕', '¡Bien hecho! 🤓', '¡Excelente! 🥳'
         ]
 
         if (correctas === 1) {
@@ -174,7 +174,7 @@ botonResultadoGastronomia.addEventListener('click', () => {
     }
 
     const mensaje = [
-        '¡Intentalo de nuevo!', '¡Puedes hacerlo mejor!', '¡Bien hecho!', '¡Excelente!'
+        '¡Intentalo de nuevo! 🤕', '¡Puedes hacerlo mejor! 😕', '¡Bien hecho! 🤓', '¡Excelente! 🥳'
     ]
 
     if (correctas === 1) {
@@ -255,7 +255,7 @@ botonResultadoFestividades.addEventListener('click', () => {
     }
 
     const mensaje = [
-        '¡Intentalo de nuevo!', '¡Puedes hacerlo mejor!', '¡Bien hecho!', '¡Excelente!'
+        '¡Intentalo de nuevo! 🤕', '¡Puedes hacerlo mejor! 😕', '¡Bien hecho! 🤓', '¡Excelente! 🥳'
     ]
 
     if (correctas === 1) {
@@ -281,7 +281,7 @@ botonSalir.addEventListener('click', () => {
     const varNombreIngresado = varNombre.value.trim().toUpperCase();
     varResultadoOpciones.classList.add('ocultar');
     varDespedida.classList.remove('ocultar');
-    varDespedida.innerHTML = `<h2>¡Gracias por jugar ${varNombreIngresado},<br>vuelve pronto!</h2>`
+    varDespedida.innerHTML = `<h2>¡Gracias por jugar ${varNombreIngresado}, 😊 <br>vuelve pronto! 🤗</h2>`
 });
 
 // // Declaro la variable del boton iniciar que voy a usar para la funcion con su respectivo Id.
