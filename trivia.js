@@ -17,7 +17,6 @@ botonIniciar.addEventListener('click', () => {
 // Funcionalidad trivia Perú
 
 const botonPeru = document.getElementById('peru');
-
 botonPeru.addEventListener('click', () => {
     const varPantallaDeOpciones = document.getElementById('pantallaDeOpciones');
     const varPeru1 = document.getElementById('peru1');
@@ -27,7 +26,6 @@ botonPeru.addEventListener('click', () => {
 });
 
 const botonSiguiente1Peru = document.getElementById('siguiente1Peru');
-
 botonSiguiente1Peru.addEventListener('click', () => {
     const varPeru1 = document.getElementById('peru1');
     const varPeru2 = document.getElementById('peru2');
@@ -37,7 +35,6 @@ botonSiguiente1Peru.addEventListener('click', () => {
 });
 
 const botonSiguiente2Peru = document.getElementById('siguiente2Peru');
-
 botonSiguiente2Peru.addEventListener('click', () => {
     const varPeru2 = document.getElementById('peru2');
     const varPeru3 = document.getElementById('peru3');
@@ -47,7 +44,6 @@ botonSiguiente2Peru.addEventListener('click', () => {
 });
 
 const botonResultadoPeru = document.getElementById('resultadoPeru');
-
 botonResultadoPeru.addEventListener('click', () => {
     const varPeru3 = document.getElementById('peru3');
     const varResultadoOpciones = document.getElementById('resultadoOpciones');
@@ -84,7 +80,6 @@ botonResultadoPeru.addEventListener('click', () => {
 
 // Funcionalidad trivia Gastronomía
 const botonGastronomia = document.getElementById('gastronomia');
-
 botonGastronomia.addEventListener('click', () => {
     const varPantallaDeOpciones = document.getElementById('pantallaDeOpciones');
     const varGastronomia1 = document.getElementById('gastronomia1');
@@ -94,7 +89,6 @@ botonGastronomia.addEventListener('click', () => {
 });
 
 const botonSiguiente1Gastronomia = document.getElementById('siguiente1Gastronomia');
-
 botonSiguiente1Gastronomia.addEventListener('click', () => {
 
     const varGastronomia1 = document.getElementById('gastronomia1');
@@ -105,7 +99,6 @@ botonSiguiente1Gastronomia.addEventListener('click', () => {
 });
 
 const botonSiguiente2Gastronomia = document.getElementById('siguiente2Gastronomia');
-
 botonSiguiente2Gastronomia.addEventListener('click', () => {
 
     const varGastronomia2 = document.getElementById('gastronomia2');
@@ -117,7 +110,6 @@ botonSiguiente2Gastronomia.addEventListener('click', () => {
 });
 
 const botonResultadoGastronomia = document.getElementById('resultadoGastronomia');
-
 botonResultadoGastronomia.addEventListener('click', () => {
 
     const varGastronomia3 = document.getElementById('gastronomia3');
@@ -180,7 +172,6 @@ botonSiguiente2Festividades.addEventListener('click', () => {
 });
 
 const botonResultadoFestividades = document.getElementById('resultadoFestividades');
-
 botonResultadoFestividades.addEventListener('click', () => {
 
     const varFestividades3 = document.getElementById('festividades3');
