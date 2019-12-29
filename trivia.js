@@ -48,15 +48,16 @@ botonResultadoPeru.addEventListener('click', () => {
     const varPeru3 = document.getElementById('peru3');
     const varResultadoOpciones = document.getElementById('resultadoOpciones');
     const varNombre = document.getElementById('nombre');
-    const varUsuario = varNombre.value;
+    const varUsuario = varNombre.value.toUpperCase();
     const varMensajeResultado = document.getElementById('mensajeResultado');
     const preg1Peru = document.trivia1.preg1Peru.value;
     const preg2Peru = document.trivia1.preg2Peru.value;
     const preg3Peru = document.trivia1.preg3Peru.value;
+    document.trivia1.reset()
 
     varPeru3.classList.add('ocultar');
     varResultadoOpciones.classList.remove('ocultar');
-    
+
     let correctas = 0;
 
     if (preg1Peru === 'Cuzco') {
@@ -71,11 +72,17 @@ botonResultadoPeru.addEventListener('click', () => {
         correctas++;
     }
 
+    const mensaje = [
+        '¡Intentalo de nuevo!', '¡Puedes hacerlo mejor!', '¡Bien hecho!', '¡Excelente!'
+    ]
+
     if (correctas === 1) {
-        varMensajeResultado.innerText = `${varUsuario} Tienes ${correctas} acierto`
+        varMensajeResultado.innerText = `Tienes ${correctas} acierto ${varUsuario} \n ${mensaje[correctas]}`
     } else {
-        varMensajeResultado.innerText = `${varUsuario} Tienes ${correctas} aciertos`
+        varMensajeResultado.innerText = `Tienes ${correctas} aciertos ${varUsuario} \n ${mensaje[correctas]}`
     }
+
+
 });
 
 // Funcionalidad trivia Gastronomía
@@ -115,11 +122,12 @@ botonResultadoGastronomia.addEventListener('click', () => {
     const varGastronomia3 = document.getElementById('gastronomia3');
     const varResultadoOpciones = document.getElementById('resultadoOpciones');
     const varNombre = document.getElementById('nombre');
-    const varUsuario = varNombre.value;
+    const varUsuario = varNombre.value.toUpperCase();
     const varMensajeResultado = document.getElementById('mensajeResultado');
     const preg1Gastronomia = document.trivia2.preg1Gastronomia.value;
     const preg2Gastronomia = document.trivia2.preg2Gastronomia.value;
     const preg3Gastronomia = document.trivia2.preg3Gastronomia.value;
+    document.trivia2.reset()
 
     varGastronomia3.classList.add('ocultar');
     varResultadoOpciones.classList.remove('ocultar');
@@ -138,10 +146,14 @@ botonResultadoGastronomia.addEventListener('click', () => {
         correctas++;
     }
 
+    const mensaje = [
+        '¡Intentalo de nuevo!', '¡Puedes hacerlo mejor!', '¡Bien hecho!', '¡Excelente!'
+    ]
+
     if (correctas === 1) {
-        varMensajeResultado.innerText = `${varUsuario} Tienes ${correctas} acierto`
+        varMensajeResultado.innerText = `Tienes ${correctas} acierto ${varUsuario} \n ${mensaje[correctas]}`
     } else {
-        varMensajeResultado.innerText = `${varUsuario} Tienes ${correctas} aciertos`
+        varMensajeResultado.innerText = `Tienes ${correctas} aciertos ${varUsuario} \n ${mensaje[correctas]}`
     }
 });
 
@@ -177,11 +189,12 @@ botonResultadoFestividades.addEventListener('click', () => {
     const varFestividades3 = document.getElementById('festividades3');
     const varResultadoOpciones = document.getElementById('resultadoOpciones');
     const varNombre = document.getElementById('nombre');
-    const varUsuario = varNombre.value;
+    const varUsuario = varNombre.value.toUpperCase();
     const varMensajeResultado = document.getElementById('mensajeResultado');
     const preg1Festividades = document.trivia3.preg1Festividades.value;
     const preg2Festividades = document.trivia3.preg2Festividades.value;
     const preg3Festividades = document.trivia3.preg3Festividades.value;
+    document.trivia3.reset()
 
     varFestividades3.classList.add('ocultar');
     varResultadoOpciones.classList.remove('ocultar');
@@ -200,10 +213,14 @@ botonResultadoFestividades.addEventListener('click', () => {
         correctas++;
     }
 
+    const mensaje = [
+        '¡Intentalo de nuevo!', '¡Puedes hacerlo mejor!', '¡Bien hecho!', '¡Excelente!'
+    ]
+
     if (correctas === 1) {
-        varMensajeResultado.innerText = `${varUsuario} Tienes ${correctas} acierto`
+        varMensajeResultado.innerText = `Tienes ${correctas} acierto ${varUsuario} \n ${mensaje[correctas]}`
     } else {
-        varMensajeResultado.innerText = `${varUsuario} Tienes ${correctas} aciertos`
+        varMensajeResultado.innerText = `Tienes ${correctas} aciertos ${varUsuario} \n ${mensaje[correctas]}`
     }
 });
 
