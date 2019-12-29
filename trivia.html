@@ -12,14 +12,14 @@
 <body>
     <article>
         <section id="pantallaPrincipal">
-            <h2>¡Bienvenidos a la Trivia!</h2>
+            <h2>¡Bienvenidos a la Trivia sobre Perú!</h2>
             <h3>¿Cómo te llamas?</h3>
             <input type="text" id="nombre" name="name" placeholder="Ingresa tu nombre aquí">
             <input type="button" id="iniciar" value="Iniciar">
         </section>
         <section id="pantallaDeOpciones" class="ocultar">
             <h3 id="mensajeUsuario"></h3>
-            <h3>Escoge la opción que prefieras.</h3>
+            <h3 id="escoge">Escoge la opción que prefieras.</h3>
             <input type="button" id="peru" value="¿Cuánto conoces del Perú?">
             <input type="button" id="gastronomia" value="¿Cuánto sabes de la Gastronomía del Perú?">
             <input type="button" id="festividades" value="¿Conoces las Festividades del Perú?">
@@ -32,40 +32,46 @@
         <form name="trivia1" id="triviaP">
             <section id="peru1" class="ocultar">
                 <h3>¿En qué departamento se encuentra Machu Picchu?</h3>
-                <input type="radio" id="ica" name="preg1Peru" value="Ica">
-                <label for="ica">Ica</label><br>
-                <input type="radio" id="arequipa" name="preg1Peru" value="Arequipa">
-                <label for="arequipa">Arequipa</label><br>
-                <input type="radio" id="cuzco" name="preg1Peru" value="Cuzco">
-                <label for="cuzco">Cuzco</label><br>
-                <input type="radio" id="tacna" name="preg1Peru" value="Tacna">
-                <label for="tacna">Tacna</label><br>
+                <div>
+                    <input type="radio" id="ica" name="preg1Peru" value="Ica">
+                    <label for="ica">Ica</label><br>
+                    <input type="radio" id="arequipa" name="preg1Peru" value="Arequipa">
+                    <label for="arequipa">Arequipa</label><br>
+                    <input type="radio" id="cuzco" name="preg1Peru" value="Cuzco">
+                    <label for="cuzco">Cuzco</label><br>
+                    <input type="radio" id="tacna" name="preg1Peru" value="Tacna">
+                    <label for="tacna">Tacna</label><br>
+                </div>
                 <input type="button" id="siguiente1Peru" value="Siguiente">
             </section>
 
             <section id="peru2" class="ocultar">
                 <h3>¿Cuál es el animal emblemático del Perú?</h3>
-                <input type="radio" id="venadoColaBlanca" name="preg2Peru" value="Venado de cola blanca">
-                <label for="venadoColaBlanca">Venado de cola blanca</label><br>
-                <input type="radio" id="vicuña" name="preg2Peru" value="Vicuña">
-                <label for="vicuña">Vicuña</label><br>
-                <input type="radio" id="osoAnteojos" name="preg2Peru" value="Oso de anteojos">
-                <label for="osoAnteojos">Oso de anteojos</label><br>
-                <input type="radio" id="gatoAndino" name="preg2Peru" value="Gato andino">
-                <label for="gatoAndino">Gato andino</label><br>
+                <div>
+                    <input type="radio" id="venadoColaBlanca" name="preg2Peru" value="Venado de cola blanca">
+                    <label for="venadoColaBlanca">Venado de cola blanca</label><br>
+                    <input type="radio" id="vicuña" name="preg2Peru" value="Vicuña">
+                    <label for="vicuña">Vicuña</label><br>
+                    <input type="radio" id="osoAnteojos" name="preg2Peru" value="Oso de anteojos">
+                    <label for="osoAnteojos">Oso de anteojos</label><br>
+                    <input type="radio" id="gatoAndino" name="preg2Peru" value="Gato andino">
+                    <label for="gatoAndino">Gato andino</label><br>
+                </div>
                 <input type="button" id="siguiente2Peru" value="Siguiente">
             </section>
 
             <section id="peru3" class="ocultar">
                 <h3>¿Qué lengua predomina en el país después del español?</h3>
-                <input type="radio" id="aimara" name="preg3Peru" value="Aimara">
-                <label for="aimara">Aimara</label><br>
-                <input type="radio" id="quechua" name="preg3Peru" value="Quechua">
-                <label for="quechua">Quechua</label><br>
-                <input type="radio" id="maku" name="preg3Peru" value="Lenguas Maku">
-                <label for="maku">Lenguas Maku</label><br>
-                <input type="radio" id="charruas" name="preg3Peru" value="Lenguas Charrúas">
-                <label for="charruas">Lenguas Charrúas</label><br>
+                <div>
+                    <input type="radio" id="aimara" name="preg3Peru" value="Aimara">
+                    <label for="aimara">Aimara</label><br>
+                    <input type="radio" id="quechua" name="preg3Peru" value="Quechua">
+                    <label for="quechua">Quechua</label><br>
+                    <input type="radio" id="maku" name="preg3Peru" value="Lenguas Maku">
+                    <label for="maku">Lenguas Maku</label><br>
+                    <input type="radio" id="charruas" name="preg3Peru" value="Lenguas Charrúas">
+                    <label for="charruas">Lenguas Charrúas</label><br>
+                </div>
                 <input type="button" id="resultadoPeru" value="Resultado">
             </section>
         </form>
@@ -74,40 +80,46 @@
         <form name="trivia2" id="triviaG">
             <section id="gastronomia1" class="ocultar">
                 <h3>¿Cuál plato típico es elaborado por la cocción al calor de piedras calentadas?</h3>
-                <input type="radio" id="patasca" name="preg1Gastronomia" value="Patasca">
-                <label for="patasca">Patasca</label><br>
-                <input type="radio" id="pachamanca" name="preg1Gastronomia" value="Pachamanca">
-                <label for="pachamanca">Pachamanca</label><br>
-                <input type="radio" id="arrozConPollo" name="preg1Gastronomia" value="Arroz con pollo">
-                <label for="arrozConPollo">Arroz con pollo</label><br>
-                <input type="radio" id="ceviche" name="preg1Gastronomia" value="Ceviche">
-                <label for="ceviche">Ceviche</label><br>
+                <div>
+                    <input type="radio" id="patasca" name="preg1Gastronomia" value="Patasca">
+                    <label for="patasca">Patasca</label><br>
+                    <input type="radio" id="pachamanca" name="preg1Gastronomia" value="Pachamanca">
+                    <label for="pachamanca">Pachamanca</label><br>
+                    <input type="radio" id="arrozConPollo" name="preg1Gastronomia" value="Arroz con pollo">
+                    <label for="arrozConPollo">Arroz con pollo</label><br>
+                    <input type="radio" id="ceviche" name="preg1Gastronomia" value="Ceviche">
+                    <label for="ceviche">Ceviche</label><br>
+                </div>
                 <input type="button" id="siguiente1Gastronomia" value="Siguiente">
             </section>
 
             <section id="gastronomia2" class="ocultar">
                 <h3>¿La carapulcra es un guiso típico elaborado con... ?</h3>
-                <input type="radio" id="bonito" name="preg2Gastronomia" value="Pescado bonito">
-                <label for="bonito">Pescado bonito</label><br>
-                <input type="radio" id="pancita" name="preg2Gastronomia" value="Pancita">
-                <label for="pancita">Pancita</label><br>
-                <input type="radio" id="papaSeca" name="preg2Gastronomia" value="Papa seca y carne de cerdo">
-                <label for="papaSeca">Papa seca y carne de cerdo</label><br>
-                <input type="radio" id="res" name="preg2Gastronomia" value="Carne de res">
-                <label for="res">Carne de res</label><br>
+                <div>
+                    <input type="radio" id="bonito" name="preg2Gastronomia" value="Pescado bonito">
+                    <label for="bonito">Pescado bonito</label><br>
+                    <input type="radio" id="pancita" name="preg2Gastronomia" value="Pancita">
+                    <label for="pancita">Pancita</label><br>
+                    <input type="radio" id="papaSeca" name="preg2Gastronomia" value="Papa seca y carne de cerdo">
+                    <label for="papaSeca">Papa seca y carne de cerdo</label><br>
+                    <input type="radio" id="res" name="preg2Gastronomia" value="Carne de res">
+                    <label for="res">Carne de res</label><br>
+                </div>
                 <input type="button" id="siguiente2Gastronomia" value="Siguiente">
             </section>
 
             <section id="gastronomia3" class="ocultar">
                 <h3>¿El ají de gallina es un plato típico de la gastronomía peruana, concretamente de la... ?</h3>
-                <input type="radio" id="costa" name="preg3Gastronomia" value="Costa">
-                <label for="costa">Costa</label><br>
-                <input type="radio" id="selva" name="preg3Gastronomia" value="Selva">
-                <label for="selva">Selva</label><br>
-                <input type="radio" id="sierra" name="preg3Gastronomia" value="Sierra">
-                <label for="sierra">Sierra</label>Sierra<br>
-                <input type="radio" id="andes" name="preg3Gastronomia" value="Andes">
-                <label for="andes">Andes</label><br>
+                <div>
+                    <input type="radio" id="costa" name="preg3Gastronomia" value="Costa">
+                    <label for="costa">Costa</label><br>
+                    <input type="radio" id="selva" name="preg3Gastronomia" value="Selva">
+                    <label for="selva">Selva</label><br>
+                    <input type="radio" id="sierra" name="preg3Gastronomia" value="Sierra">
+                    <label for="sierra">Sierra</label>Sierra<br>
+                    <input type="radio" id="andes" name="preg3Gastronomia" value="Andes">
+                    <label for="andes">Andes</label><br>
+                </div>
                 <input type="button" id="resultadoGastronomia" value="Resultado">
             </section>
         </form>
@@ -116,40 +128,48 @@
         <form name="trivia3" id="triviaF">
             <section id="festividades1" class="ocultar">
                 <h3>¿Qué se celebra el primer sabado de febrero?</h3>
-                <input type="radio" id="independencia" name="preg1Festividades" value="Día de la Independencia">
-                <label for="independencia">Día de la Independencia</label><br>
-                <input type="radio" id="aniversarioChiclayo" name="preg1Festividades" value="Aniversario de Chiclayo">
-                <label for="aniversarioChiclayo">Aniversario de Chiclayo</label><br>
-                <input type="radio" id="diaPiscoSour" name="preg1Festividades" value="Día del Pisco Sour">
-                <label for="diaPiscoSour">Día del Pisco Sour</label><br>
-                <input type="radio" id="diaPachamanca" name="preg1Festividades" value="Día de la Pachamanca">
-                <label for="diaPachamanca">Día de la Pachamanca</label><br>
+                <div>
+                    <input type="radio" id="independencia" name="preg1Festividades" value="Día de la Independencia">
+                    <label for="independencia">Día de la Independencia</label><br>
+                    <input type="radio" id="aniversarioChiclayo" name="preg1Festividades"
+                        value="Aniversario de Chiclayo">
+                    <label for="aniversarioChiclayo">Aniversario de Chiclayo</label><br>
+                    <input type="radio" id="diaPiscoSour" name="preg1Festividades" value="Día del Pisco Sour">
+                    <label for="diaPiscoSour">Día del Pisco Sour</label><br>
+                    <input type="radio" id="diaPachamanca" name="preg1Festividades" value="Día de la Pachamanca">
+                    <label for="diaPachamanca">Día de la Pachamanca</label><br>
+                </div>
                 <input type="button" id="siguiente1Festividades" value="Siguiente">
             </section>
 
             <section id="festividades2" class="ocultar">
                 <h3>¿El 30 de agosto se celebra el día de... ?</h3>
-                <input type="radio" id="inmaculadaConcepcion" name="preg2Festividades" value="La inmaculada concepción">
-                <label for="inmaculadaConcepcion">La inmaculada concepción</label><br>
-                <input type="radio" id="fiestasPatrias" name="preg2Festividades" value="Fiestas Patrias">
-                <label for="fiestasPatrias">Fiestas Patrias</label><br>
-                <input type="radio" id="senorMilagros" name="preg2Festividades" value="Señor de los milagros">
-                <label for="senorMilagros">Señor de los milagros</label><br>
-                <input type="radio" id="santaRosaDeLima" name="preg2Festividades" value="Santa Rosa de Lima">
-                <label for="santaRosaDeLima">Santa Rosa de Lima</label><br>
+                <div>
+                    <input type="radio" id="inmaculadaConcepcion" name="preg2Festividades"
+                        value="La inmaculada concepción">
+                    <label for="inmaculadaConcepcion">La inmaculada concepción</label><br>
+                    <input type="radio" id="fiestasPatrias" name="preg2Festividades" value="Fiestas Patrias">
+                    <label for="fiestasPatrias">Fiestas Patrias</label><br>
+                    <input type="radio" id="senorMilagros" name="preg2Festividades" value="Señor de los milagros">
+                    <label for="senorMilagros">Señor de los milagros</label><br>
+                    <input type="radio" id="santaRosaDeLima" name="preg2Festividades" value="Santa Rosa de Lima">
+                    <label for="santaRosaDeLima">Santa Rosa de Lima</label><br>
+                </div>
                 <input type="button" id="siguiente2Festividades" value="Siguiente">
             </section>
 
             <section id="festividades3" class="ocultar">
                 <h3>¿Qué festividad celebrada el 31 de octubre busca fomentar la identidad nacional y cultural?</h3>
-                <input type="radio" id="combateAngamos" name="preg3Festividades" value="Combate de Angamos">
-                <label for="combateAngamos">Combate de Angamos</label><br>
-                <input type="radio" id="piscoSour" name="preg3Festividades" value="Día del Pisco Sour">
-                <label for="piscoSour">Día del Pisco Sour</label><br>
-                <input type="radio" id="canciónCriolla" name="preg3Festividades" value="Día de la canción criolla">
-                <label for="canciónCriolla">Día de la canción criolla</label><br>
-                <input type="radio" id="sanJuan" name="preg3Festividades" value="Fiesta de San Juan">
-                <label for="sanJuan">Fiesta de San Juan</label><br>
+                <div>
+                    <input type="radio" id="combateAngamos" name="preg3Festividades" value="Combate de Angamos">
+                    <label for="combateAngamos">Combate de Angamos</label><br>
+                    <input type="radio" id="piscoSour" name="preg3Festividades" value="Día del Pisco Sour">
+                    <label for="piscoSour">Día del Pisco Sour</label><br>
+                    <input type="radio" id="canciónCriolla" name="preg3Festividades" value="Día de la canción criolla">
+                    <label for="canciónCriolla">Día de la canción criolla</label><br>
+                    <input type="radio" id="sanJuan" name="preg3Festividades" value="Fiesta de San Juan">
+                    <label for="sanJuan">Fiesta de San Juan</label><br>
+                </div>
                 <input type="button" id="resultadoFestividades" value="Resultado">
             </section>
         </form>
@@ -161,13 +181,11 @@
             <input type="button" id="salir" value="Salir">
         </section>
 
+        <!--Pantalla despedida-->
         <section id="despedida" class="ocultar">
-            <h2>¡Gracias por jugar, vuelve pronto!</h2>
+
         </section>
     </article>
-
-
-
 
     <script src="trivia.js"></script>
 </body>
