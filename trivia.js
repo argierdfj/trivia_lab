@@ -207,6 +207,21 @@ botonResultadoFestividades.addEventListener('click', () => {
     }
 });
 
+const botonVolverAJugar = document.getElementById('vovlverAJugar');
+botonVolverAJugar.addEventListener('click', () => {
+    const varResultadoOpciones = document.getElementById('resultadoOpciones');
+    const varPantallaDeOpcines = document.getElementById('pantallaDeOpciones');
+    varResultadoOpciones.classList.add('ocultar');
+    varPantallaDeOpcines.classList.remove('ocultar');
+});
+
+const botonSalir = document.getElementById('salir');
+botonSalir.addEventListener('click', () => {
+    const varResultadoOpciones = document.getElementById('resultadoOpciones');
+    const varDespedida = document.getElementById('despedida');
+    varResultadoOpciones.classList.add('ocultar');
+    varDespedida.classList.remove('ocultar');
+});
 
 // // Declaro la variable del boton iniciar que voy a usar para la funcion con su respectivo Id.
 // const iniciarTrivia = document.getElementById('iniciar');
