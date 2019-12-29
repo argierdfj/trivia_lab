@@ -5,16 +5,16 @@ botonIniciar.addEventListener('click', () => {
     //declaro las variables con los elementos html que voy a manipular identificados con su Id.
     const varPantallaPrincipal = document.getElementById('pantallaPrincipal');
     const varNombre = document.getElementById('nombre');
-    const varNombreIngresado = varNombre.value.trim(); 
+    const varNombreIngresado = varNombre.value.trim();
     const varPantallaDeOpcines = document.getElementById('pantallaDeOpciones');
     const varMensajeUsuario = document.getElementById('mensajeUsuario');
 
-    if (varNombre) {
+    if (varNombreIngresado) {
         varPantallaPrincipal.classList.add('ocultar');
         varPantallaDeOpcines.classList.remove('ocultar');
-        varMensajeUsuario.innerText = `Hola ${varNombre.toUpperCase()}, veamos cuánto conoces del Perú.`
+        varMensajeUsuario.innerText = `Hola ${varNombreIngresado.toUpperCase()}, veamos cuánto conoces del Perú. 😄`
     } else {
-        alert('Debes ingresar tu nombre para continuar');
+        alert('Debes ingresar tu nombre para continuar 😒');
     }
 });
 
@@ -32,18 +32,26 @@ const botonSiguiente1Peru = document.getElementById('siguiente1Peru');
 botonSiguiente1Peru.addEventListener('click', () => {
     const varPeru1 = document.getElementById('peru1');
     const varPeru2 = document.getElementById('peru2');
-
-    varPeru1.classList.add('ocultar');
-    varPeru2.classList.remove('ocultar');
+    const preg1Peru = document.trivia1.preg1Peru.value;
+    if (preg1Peru) {
+        varPeru1.classList.add('ocultar');
+        varPeru2.classList.remove('ocultar');
+    } else {
+        alert('Debes seleccionar una opción 🙄')
+    }
 });
 
 const botonSiguiente2Peru = document.getElementById('siguiente2Peru');
 botonSiguiente2Peru.addEventListener('click', () => {
     const varPeru2 = document.getElementById('peru2');
     const varPeru3 = document.getElementById('peru3');
-
-    varPeru2.classList.add('ocultar');
-    varPeru3.classList.remove('ocultar');
+    const preg2Peru = document.trivia1.preg2Peru.value;
+    if (preg2Peru) {
+        varPeru2.classList.add('ocultar');
+        varPeru3.classList.remove('ocultar');
+    } else {
+        alert('Debes seleccionar una opción 🙄')
+    }
 });
 
 const botonResultadoPeru = document.getElementById('resultadoPeru');
@@ -51,41 +59,45 @@ botonResultadoPeru.addEventListener('click', () => {
     const varPeru3 = document.getElementById('peru3');
     const varResultadoOpciones = document.getElementById('resultadoOpciones');
     const varNombre = document.getElementById('nombre');
-    const varUsuario = varNombre.value.toUpperCase();
+    const varNombreIngresado = varNombre.value.trim().toUpperCase();
     const varMensajeResultado = document.getElementById('mensajeResultado');
     const preg1Peru = document.trivia1.preg1Peru.value;
     const preg2Peru = document.trivia1.preg2Peru.value;
     const preg3Peru = document.trivia1.preg3Peru.value;
-    document.trivia1.reset()
 
-    varPeru3.classList.add('ocultar');
-    varResultadoOpciones.classList.remove('ocultar');
+    if (preg3Peru) {
 
-    let correctas = 0;
+        varPeru3.classList.add('ocultar');
+        varResultadoOpciones.classList.remove('ocultar');
+        document.trivia1.reset()
 
-    if (preg1Peru === 'Cuzco') {
-        correctas++;
-    }
+        let correctas = 0;
 
-    if (preg2Peru === 'Vicuña') {
-        correctas++;
-    }
+        if (preg1Peru === 'Cuzco') {
+            correctas++;
+        }
 
-    if (preg3Peru === 'Quechua') {
-        correctas++;
-    }
+        if (preg2Peru === 'Vicuña') {
+            correctas++;
+        }
 
-    const mensaje = [
-        '¡Intentalo de nuevo!', '¡Puedes hacerlo mejor!', '¡Bien hecho!', '¡Excelente!'
-    ]
+        if (preg3Peru === 'Quechua') {
+            correctas++;
+        }
 
-    if (correctas === 1) {
-        varMensajeResultado.innerText = `Tienes ${correctas} acierto ${varUsuario} \n ${mensaje[correctas]}`
+        const mensaje = [
+            '¡Intentalo de nuevo!', '¡Puedes hacerlo mejor!', '¡Bien hecho!', '¡Excelente!'
+        ]
+
+        if (correctas === 1) {
+            varMensajeResultado.innerText = `Tienes ${correctas} acierto ${varNombreIngresado} \n ${mensaje[correctas]}`
+        } else {
+            varMensajeResultado.innerText = `Tienes ${correctas} aciertos ${varNombreIngresado} \n ${mensaje[correctas]}`
+        }
+
     } else {
-        varMensajeResultado.innerText = `Tienes ${correctas} aciertos ${varUsuario} \n ${mensaje[correctas]}`
+        alert('Debes seleccionar una opción 🙄')
     }
-
-
 });
 
 // Funcionalidad trivia Gastronomía
@@ -103,9 +115,13 @@ botonSiguiente1Gastronomia.addEventListener('click', () => {
 
     const varGastronomia1 = document.getElementById('gastronomia1');
     const varGastronomia2 = document.getElementById('gastronomia2');
-
-    varGastronomia1.classList.add('ocultar');
-    varGastronomia2.classList.remove('ocultar');
+    const preg1Gastronomia = document.trivia2.preg1Gastronomia.value;
+    if (preg1Gastronomia) {
+        varGastronomia1.classList.add('ocultar');
+        varGastronomia2.classList.remove('ocultar');
+    } else {
+        alert('Debes seleccionar una opción 🙄');
+    }
 });
 
 const botonSiguiente2Gastronomia = document.getElementById('siguiente2Gastronomia');
@@ -113,9 +129,13 @@ botonSiguiente2Gastronomia.addEventListener('click', () => {
 
     const varGastronomia2 = document.getElementById('gastronomia2');
     const varGastronomia3 = document.getElementById('gastronomia3');
-
-    varGastronomia2.classList.add('ocultar');
-    varGastronomia3.classList.remove('ocultar');
+    const preg2Gastronomia = document.trivia2.preg2Gastronomia.value;
+    if (preg2Gastronomia) {
+        varGastronomia2.classList.add('ocultar');
+        varGastronomia3.classList.remove('ocultar');
+    } else {
+        alert('Debes seleccionar una opción 🙄');
+    }
 
 });
 
@@ -125,15 +145,19 @@ botonResultadoGastronomia.addEventListener('click', () => {
     const varGastronomia3 = document.getElementById('gastronomia3');
     const varResultadoOpciones = document.getElementById('resultadoOpciones');
     const varNombre = document.getElementById('nombre');
-    const varUsuario = varNombre.value.toUpperCase();
+    const varNombreIngresado = varNombre.value.trim().toUpperCase();
     const varMensajeResultado = document.getElementById('mensajeResultado');
     const preg1Gastronomia = document.trivia2.preg1Gastronomia.value;
     const preg2Gastronomia = document.trivia2.preg2Gastronomia.value;
     const preg3Gastronomia = document.trivia2.preg3Gastronomia.value;
-    document.trivia2.reset()
 
-    varGastronomia3.classList.add('ocultar');
-    varResultadoOpciones.classList.remove('ocultar');
+    if (preg3Gastronomia) {
+        varGastronomia3.classList.add('ocultar');
+        varResultadoOpciones.classList.remove('ocultar');
+        document.trivia2.reset();
+    } else {
+        alert('Debes seleccionar una opción 🙄')
+    }
 
     let correctas = 0;
 
@@ -154,9 +178,9 @@ botonResultadoGastronomia.addEventListener('click', () => {
     ]
 
     if (correctas === 1) {
-        varMensajeResultado.innerText = `Tienes ${correctas} acierto ${varUsuario} \n ${mensaje[correctas]}`
+        varMensajeResultado.innerText = `Tienes ${correctas} acierto ${varNombreIngresado} \n ${mensaje[correctas]}`
     } else {
-        varMensajeResultado.innerText = `Tienes ${correctas} aciertos ${varUsuario} \n ${mensaje[correctas]}`
+        varMensajeResultado.innerText = `Tienes ${correctas} aciertos ${varNombreIngresado} \n ${mensaje[correctas]}`
     }
 });
 
@@ -174,16 +198,26 @@ const botonSiguiente1Festividades = document.getElementById('siguiente1Festivida
 botonSiguiente1Festividades.addEventListener('click', () => {
     const varFestividades1 = document.getElementById('festividades1');
     const varFestividades2 = document.getElementById('festividades2');
-    varFestividades1.classList.add('ocultar');
-    varFestividades2.classList.remove('ocultar');
+    const preg1Festividades = document.trivia3.preg1Festividades.value;
+    if (preg1Festividades) {
+        varFestividades1.classList.add('ocultar');
+        varFestividades2.classList.remove('ocultar');
+    } else {
+        alert('Debes seleccionar una opción 🙄');
+    }
 });
 
 const botonSiguiente2Festividades = document.getElementById('siguiente2Festividades');
 botonSiguiente2Festividades.addEventListener('click', () => {
     const varFestividades2 = document.getElementById('festividades2');
     const varFestividades3 = document.getElementById('festividades3');
-    varFestividades2.classList.add('ocultar');
-    varFestividades3.classList.remove('ocultar');
+    const preg2Festividades = document.trivia3.preg2Festividades.value;
+    if (preg2Festividades) {
+        varFestividades2.classList.add('ocultar');
+        varFestividades3.classList.remove('ocultar');
+    } else {
+        alert('Debes seleccionar una opción 🙄');
+    }
 });
 
 const botonResultadoFestividades = document.getElementById('resultadoFestividades');
@@ -192,15 +226,19 @@ botonResultadoFestividades.addEventListener('click', () => {
     const varFestividades3 = document.getElementById('festividades3');
     const varResultadoOpciones = document.getElementById('resultadoOpciones');
     const varNombre = document.getElementById('nombre');
-    const varUsuario = varNombre.value.toUpperCase();
+    const varNombreIngresado = varNombre.value.trim().toUpperCase();
     const varMensajeResultado = document.getElementById('mensajeResultado');
     const preg1Festividades = document.trivia3.preg1Festividades.value;
     const preg2Festividades = document.trivia3.preg2Festividades.value;
     const preg3Festividades = document.trivia3.preg3Festividades.value;
-    document.trivia3.reset()
 
-    varFestividades3.classList.add('ocultar');
-    varResultadoOpciones.classList.remove('ocultar');
+    if (preg3Festividades) {
+        varFestividades3.classList.add('ocultar');
+        varResultadoOpciones.classList.remove('ocultar');
+        document.trivia3.reset();
+    } else {
+        alert('Debes seleccionar una opción 🙄')
+    }
 
     let correctas = 0;
 
@@ -221,9 +259,9 @@ botonResultadoFestividades.addEventListener('click', () => {
     ]
 
     if (correctas === 1) {
-        varMensajeResultado.innerText = `Tienes ${correctas} acierto ${varUsuario} \n ${mensaje[correctas]}`
+        varMensajeResultado.innerText = `Tienes ${correctas} acierto ${varNombreIngresado} \n ${mensaje[correctas]}`
     } else {
-        varMensajeResultado.innerText = `Tienes ${correctas} aciertos ${varUsuario} \n ${mensaje[correctas]}`
+        varMensajeResultado.innerText = `Tienes ${correctas} aciertos ${varNombreIngresado} \n ${mensaje[correctas]}`
     }
 });
 
@@ -239,8 +277,11 @@ const botonSalir = document.getElementById('salir');
 botonSalir.addEventListener('click', () => {
     const varResultadoOpciones = document.getElementById('resultadoOpciones');
     const varDespedida = document.getElementById('despedida');
+    const varNombre = document.getElementById('nombre');
+    const varNombreIngresado = varNombre.value.trim().toUpperCase();
     varResultadoOpciones.classList.add('ocultar');
     varDespedida.classList.remove('ocultar');
+    varDespedida.innerHTML = `<h2>¡Gracias por jugar ${varNombreIngresado},<br>vuelve pronto!</h2>`
 });
 
 // // Declaro la variable del boton iniciar que voy a usar para la funcion con su respectivo Id.
