@@ -18,14 +18,28 @@ botonIniciar.addEventListener('click', () => {
     }
 });
 
+let tiempoTotal = 9; // Son variables globales
+let contador;
+
 // Funcionalidad trivia Perú
 const botonPeru = document.getElementById('peru');
 botonPeru.addEventListener('click', () => {
     const varPantallaDeOpciones = document.getElementById('pantallaDeOpciones');
     const varPeru1 = document.getElementById('peru1');
-
     varPantallaDeOpciones.classList.add('ocultar');
     varPeru1.classList.remove('ocultar');
+
+    contador = setInterval(() => {
+        const span = document.getElementById('cuentaRegresivaP1');
+        if (tiempoTotal === 0) {
+            clearInterval(contador);
+            span.innerText = tiempoTotal;
+            alert('Se terminó el tiempo');
+        } else {
+            span.innerText = tiempoTotal;
+            tiempoTotal -= 1;
+        }
+    }, 1000);
 });
 
 const botonSiguiente1Peru = document.getElementById('siguiente1Peru');
@@ -36,6 +50,20 @@ botonSiguiente1Peru.addEventListener('click', () => {
     if (preg1Peru) {
         varPeru1.classList.add('ocultar');
         varPeru2.classList.remove('ocultar');
+
+        clearInterval(contador);
+        tiempoTotal = 9;
+        contador = setInterval(() => {
+            const span = document.getElementById('cuentaRegresivaP2');
+            if (tiempoTotal === 0) {
+                clearInterval(contador);
+                span.innerText = tiempoTotal;
+                alert('Se terminó el tiempo');
+            } else {
+                span.innerText = tiempoTotal;
+                tiempoTotal -= 1;
+            }
+        }, 1000);
     } else {
         alert('Debes seleccionar una opción 🙄')
     }
@@ -49,6 +77,20 @@ botonSiguiente2Peru.addEventListener('click', () => {
     if (preg2Peru) {
         varPeru2.classList.add('ocultar');
         varPeru3.classList.remove('ocultar');
+
+        clearInterval(contador);
+        tiempoTotal = 9;
+        contador = setInterval(() => {
+            const span = document.getElementById('cuentaRegresivaP3');
+            if (tiempoTotal === 0) {
+                clearInterval(contador);
+                span.innerText = tiempoTotal;
+                alert('Se terminó el tiempo');
+            } else {
+                span.innerText = tiempoTotal;
+                tiempoTotal -= 1;
+            }
+        }, 1000)
     } else {
         alert('Debes seleccionar una opción 🙄')
     }
@@ -69,6 +111,7 @@ botonResultadoPeru.addEventListener('click', () => {
 
         varPeru3.classList.add('ocultar');
         varResultadoOpciones.classList.remove('ocultar');
+        clearInterval(contador);
         document.trivia1.reset()
 
         let correctas = 0;
@@ -105,9 +148,20 @@ const botonGastronomia = document.getElementById('gastronomia');
 botonGastronomia.addEventListener('click', () => {
     const varPantallaDeOpciones = document.getElementById('pantallaDeOpciones');
     const varGastronomia1 = document.getElementById('gastronomia1');
-
     varPantallaDeOpciones.classList.add('ocultar');
     varGastronomia1.classList.remove('ocultar');
+
+    contador = setInterval(() => {
+        const span = document.getElementById('cuentaRegresivaG1');
+        if (tiempoTotal === 0) {
+            clearInterval(contador);
+            span.innerText = tiempoTotal;
+            alert('Se terminó el tiempo');
+        } else {
+            span.innerText = tiempoTotal;
+            tiempoTotal -= 1;
+        }
+    }, 1000)
 });
 
 const botonSiguiente1Gastronomia = document.getElementById('siguiente1Gastronomia');
@@ -119,6 +173,20 @@ botonSiguiente1Gastronomia.addEventListener('click', () => {
     if (preg1Gastronomia) {
         varGastronomia1.classList.add('ocultar');
         varGastronomia2.classList.remove('ocultar');
+
+        clearInterval(contador);
+        tiempoTotal = 9;
+        contador = setInterval(() => {
+            const span = document.getElementById('cuentaRegresivaG2');
+            if (tiempoTotal === 0) {
+                clearInterval(contador);
+                span.innerText = tiempoTotal;
+                alert('Se terminó el tiempo');
+            } else {
+                span.innerText = tiempoTotal;
+                tiempoTotal -= 1;
+            }
+        }, 1000)
     } else {
         alert('Debes seleccionar una opción 🙄');
     }
@@ -133,6 +201,19 @@ botonSiguiente2Gastronomia.addEventListener('click', () => {
     if (preg2Gastronomia) {
         varGastronomia2.classList.add('ocultar');
         varGastronomia3.classList.remove('ocultar');
+        clearInterval(contador);
+        tiempoTotal = 9;
+        contador = setInterval(() => {
+            const span = document.getElementById('cuentaRegresivaG3');
+            if (tiempoTotal === 0) {
+                clearInterval(contador);
+                span.innerText = tiempoTotal;
+                alert('Se terminó el tiempo');
+            } else {
+                span.innerText = tiempoTotal;
+                tiempoTotal -= 1;
+            }
+        }, 1000)
     } else {
         alert('Debes seleccionar una opción 🙄');
     }
@@ -154,6 +235,7 @@ botonResultadoGastronomia.addEventListener('click', () => {
     if (preg3Gastronomia) {
         varGastronomia3.classList.add('ocultar');
         varResultadoOpciones.classList.remove('ocultar');
+        clearInterval(contador);
         document.trivia2.reset();
     } else {
         alert('Debes seleccionar una opción 🙄')
@@ -192,6 +274,18 @@ botonFestividades.addEventListener('click', () => {
     const varFestividades1 = document.getElementById('festividades1');
     varPantallaDeOpciones.classList.add('ocultar');
     varFestividades1.classList.remove('ocultar');
+
+    contador = setInterval(() => {
+        const span = document.getElementById('cuentaRegresivaF1');
+        if (tiempoTotal === 0) {
+            clearInterval(contador);
+            span.innerText = tiempoTotal;
+            alert('Se terminó el tiempo');
+        } else {
+            span.innerText = tiempoTotal;
+            tiempoTotal -= 1;
+        }
+    }, 1000);
 });
 
 const botonSiguiente1Festividades = document.getElementById('siguiente1Festividades');
@@ -202,6 +296,20 @@ botonSiguiente1Festividades.addEventListener('click', () => {
     if (preg1Festividades) {
         varFestividades1.classList.add('ocultar');
         varFestividades2.classList.remove('ocultar');
+
+        clearInterval(contador);
+        tiempoTotal = 9;
+        contador = setInterval(() => {
+            const span = document.getElementById('cuentaRegresivaF2');
+            if (tiempoTotal === 0) {
+                clearInterval(contador);
+                span.innerText = tiempoTotal;
+                alert('Se terminó el tiempo');
+            } else {
+                span.innerText = tiempoTotal;
+                tiempoTotal -= 1;
+            }
+        }, 1000);
     } else {
         alert('Debes seleccionar una opción 🙄');
     }
@@ -215,6 +323,20 @@ botonSiguiente2Festividades.addEventListener('click', () => {
     if (preg2Festividades) {
         varFestividades2.classList.add('ocultar');
         varFestividades3.classList.remove('ocultar');
+
+        clearInterval(contador);
+        tiempoTotal = 9;
+        contador = setInterval(() => {
+            const span = document.getElementById('cuentaRegresivaF3');
+            if (tiempoTotal === 0) {
+                clearInterval(contador);
+                span.innerText = tiempoTotal;
+                alert('Se terminó el tiempo');
+            } else {
+                span.innerText = tiempoTotal;
+                tiempoTotal -= 1;
+            }
+        }, 1000)
     } else {
         alert('Debes seleccionar una opción 🙄');
     }
@@ -235,6 +357,7 @@ botonResultadoFestividades.addEventListener('click', () => {
     if (preg3Festividades) {
         varFestividades3.classList.add('ocultar');
         varResultadoOpciones.classList.remove('ocultar');
+        clearInterval(contador);
         document.trivia3.reset();
     } else {
         alert('Debes seleccionar una opción 🙄')
@@ -281,7 +404,7 @@ botonSalir.addEventListener('click', () => {
     const varNombreIngresado = varNombre.value.trim().toUpperCase();
     varResultadoOpciones.classList.add('ocultar');
     varDespedida.classList.remove('ocultar');
-    varDespedida.innerHTML = `<h2>¡Gracias por jugar ${varNombreIngresado},😊 <br>vuelve pronto! 🤗</h2>`
+    varDespedida.innerHTML = `<h2>¡Gracias por jugar ${varNombreIngresado}, 😊 <br>vuelve pronto! 🤗</h2>`
 });
 
 // // Declaro la variable del boton iniciar que voy a usar para la funcion con su respectivo Id.
