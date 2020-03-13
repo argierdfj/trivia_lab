@@ -2,11 +2,12 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: auto;
     width: 90%;
-    background-color: whitesmoke;
+    background-image: url('https://3.bp.blogspot.com/-UC1G08Hj_a0/VgLdJRvbXpI/AAAAAAABF48/L06tEFFOriY/s2000/minecraft-agua-3d-cubos.jpg');
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh
+    height: 100vh;
+    color: #333;
 }
 
 .ocultar {
@@ -28,7 +29,8 @@ section {
     background-color: white;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: black 5px 4px 12px;
+    box-shadow: #333 5px 4px 12px;
+    border: #f5f5f5 solid 3px; 
 }
 
 h2 {
